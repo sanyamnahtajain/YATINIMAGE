@@ -1,14 +1,18 @@
 {
-  "name": "meesho-temp",
+  "name": "meesho-image-generator",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:restart": "lsof -ti:3000 | xargs kill -9 2>/dev/null; rm -f .next/dev/lock; next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@imgly/background-removal": "^1.7.0",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
